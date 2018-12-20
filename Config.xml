@@ -1,0 +1,26 @@
+<Configuration>
+  <Name>Shipping Notification Addon</Name>
+  <Author>Austin Smith, University of Maryland Libraries</Author>
+  <Version>1.0</Version>
+  <Active>true</Active>
+  <Type>Server</Type>
+  <Description>Sends notifications for loans in Request Sent which have a due date assigned.</Description>
+  <Settings>
+    <Setting name="DeferProcessing" value="false" type="boolean">
+	  <Description>If true, will only process requests betwee 11PM and Midnight.</Description>
+	</Setting>
+    <Setting name="SendEmail" value="false" type="boolean">
+	  <Description>Specifies whether or not an email notification should be sent when an item is shipped.</Description>
+	</Setting>
+    <Setting name="EmailName" value="BorrowingLoanShipped" type="string">
+      <Description>Name of the notification template to use.</Description>
+    </Setting>
+	<Setting name="ItemField" value="ItemInfo5" type="string">
+	  <Description>Name of the Transaction field to store the Shipped date in.</Description>
+	</Setting>
+  </Settings>
+  <Forms />
+  <Files>
+    <File>Code.lua</File>
+  </Files>
+</Configuration>
